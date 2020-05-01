@@ -8,12 +8,15 @@
     "express": "^4.16.4",
     "mqtt": "^2.18.8",
     "request-promise": "^4.2.4",
-    "underscore": "^1.9.1"
+    "underscore": "^1.9.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {},
   "scripts": {
-	"start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -28,5 +31,6 @@
   "bugs": {
     "url": "https://github.com/basst85/NextRemoteJs/issues"
   },
-  "homepage": "https://github.com/basst85/NextRemoteJs#readme"
+  "homepage": "https://github.com/basst85/NextRemoteJs#readme",
+  "snyk": true
 }
